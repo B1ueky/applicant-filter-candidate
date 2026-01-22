@@ -18,8 +18,13 @@ class FilterSettings:
     # Location filter settings
     excluded_locations: List[str] = field(default_factory=lambda: ["Sydney"])
 
-    # Background filter settings
-    preferred_backgrounds: List[str] = field(default_factory=lambda: ["China", "UK", "United Kingdom", "England"])
+    # Background filter settings (中文和英文背景)
+    preferred_backgrounds: List[str] = field(default_factory=lambda: [
+        # 中文背景
+        "China", "Taiwan", "Hong Kong", "Macau", "Singapore",
+        # 英文背景
+        "UK", "United Kingdom", "England", "Australia", "New Zealand", "USA", "Canada"
+    ])
     excluded_backgrounds: List[str] = field(default_factory=lambda: [
         "India", "Pakistan", "Bangladesh",  # South Asia
         "Saudi Arabia", "UAE", "United Arab Emirates", "Qatar", "Kuwait",

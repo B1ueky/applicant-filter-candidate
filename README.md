@@ -17,7 +17,7 @@
 | AgeFilter | 20 ≤ 年龄 ≤ 40 |
 | ExperienceFilter | 1 ≤ 工作年限 ≤ 3 |
 | LocationFilter | 排除 Sydney |
-| BackgroundFilter | 有中国或英国背景，排除印度/中东地区 |
+| BackgroundFilter | 有中文或英文背景，排除印度/中东地区 |
 
 ## 安装
 

@@ -10,7 +10,7 @@ class BackgroundFilter(BaseFilter):
     """
     Filter candidates by educational and work background.
 
-    Candidates must have background in preferred countries (China/UK)
+    Candidates must have background in preferred regions (中文或英文背景)
     and must NOT have background in excluded regions (India/Middle East).
     """
 
@@ -23,11 +23,16 @@ class BackgroundFilter(BaseFilter):
         Initialize the background filter.
 
         Args:
-            preferred_backgrounds: List of preferred countries/regions
+            preferred_backgrounds: List of preferred countries/regions (中文和英文背景)
             excluded_backgrounds: List of excluded countries/regions
         """
         if preferred_backgrounds is None:
-            preferred_backgrounds = ["China", "UK", "United Kingdom", "England"]
+            preferred_backgrounds = [
+                # 中文背景
+                "China", "Taiwan", "Hong Kong", "Macau", "Singapore",
+                # 英文背景
+                "UK", "United Kingdom", "England", "Australia", "New Zealand", "USA", "Canada"
+            ]
 
         if excluded_backgrounds is None:
             excluded_backgrounds = [
@@ -47,7 +52,7 @@ class BackgroundFilter(BaseFilter):
         Check if candidate has appropriate background.
 
         Criteria:
-        1. Must have at least one preferred background (China/UK)
+        1. Must have at least one preferred background (中文或英文背景)
         2. Must NOT have any excluded background (India/Middle East)
 
         Args:
