@@ -42,19 +42,19 @@ pip install -r requirements.txt
 ### 基本运行
 
 ```bash
-python main.py
+python3 main.py
 ```
 
 ### 详细模式（显示筛选统计）
 
 ```bash
-python main.py --verbose
+python3 main.py --verbose
 ```
 
 ### 导出详细报告
 
 ```bash
-python main.py --detailed
+python3 main.py --detailed
 ```
 
 ### Shell 脚本展示
